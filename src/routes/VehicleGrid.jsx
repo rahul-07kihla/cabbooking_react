@@ -26,7 +26,7 @@ import { Icons } from "../components/Icons";
 import { Button } from "../components/ui/button";
 
 export function VehicleGrid() {
-  const url = "http://127.0.0.1:8000/api/car";
+  const url = "http://192.168.0.116:8000/api/car";
   const [data, setData] = useState([]);
 
   const fetchInfo = () => {
@@ -42,6 +42,7 @@ export function VehicleGrid() {
 
   return (
     <>
+      <div className="h1 text-center">Vahicle Grid</div>
       <VehicleCard />
     </>
   );

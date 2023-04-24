@@ -5,6 +5,9 @@ import { navItems } from "../data/navItems";
 import { Button } from "./ui/button";
 import { Icons } from "./Icons";
 import { useState, useEffect } from "react";
+import Login from "./Login";
+import { getToken } from "../utils/common";
+import Logout from "./Logout";
 
 function NavMobile() {
   const [open, setOpen] = useState(false);
@@ -118,16 +121,7 @@ export function SiteHeader() {
         </nav>
       </div>
       <ul className="hidden md:flex flex-row gap-x-10">
-        <li>
-          <Link to="/login" className="text-neutral-300 hover:text-neutral-50 transition-colors font-medium py-2 leading-none">
-            Log In
-          </Link>
-        </li>
-        <li>
-          <button className="font-semibold flex items-center justify-center px-3 bg-white text-black py-2 leading-none rounded-md border hover:bg-transparent hover:text-white hover:border-white transition-all duration-150">
-            Sign Up
-          </button>
-        </li>
+        { getToken() ? <Logout /> : <Login />}
       </ul>
       <div className="md:hidden">
         <NavMobile />
