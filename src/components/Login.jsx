@@ -5,7 +5,7 @@ export default function Login() {
     return (
         <>
             <li>
-                <Link to="/login">
+                <Link to="/login" className='text-secondary'>
                     Login
                 </Link>
             </li>

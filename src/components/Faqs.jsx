@@ -18,7 +18,7 @@ export function Faqs() {
       <p className="text-xl leading-9 mt-8 mb-16 text-center">
         If you can’t find what you’re looking for,{" "}
         <a
-          href="mailto:hello@example.com"
+          href="mailto:sviplfive@gmail.com"
           className="text-slate-300 hover:text-white underline underline-offset-4 decoration-slate-200"
         >
           reach out to us

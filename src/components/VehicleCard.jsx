@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { getBackgroundColorClass } from "../lib/utils";
-import { formatNumberAsCurrency } from "../lib/utils";
-import { Icons } from "./Icons";
+import { urlprefix } from '../utils/common';
 import { Button } from "./ui/button";
 
 export function VehicleCard() {
-  const url = "http://192.168.0.116:8000/api/car";
+  const url = urlprefix() + "car";
   const [data, setData] = useState([]);
 
   const fetchInfo = () => {

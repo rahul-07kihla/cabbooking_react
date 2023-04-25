@@ -61,13 +61,13 @@ function NavMobile() {
                   className="text-lg text-neutral-300 hover:text-white transition-colors font-medium py-[10px]"
                 >
                   {navItem.isHashLink ? (
-                    <HashLink smooth to={navItem.href} className="w-full block">
+                    <HashLink smooth to={navItem.href} className="w-full block text-secondary">
                       {navItem.title}
                     </HashLink>
                   ) : (
                     <Link
                       to={navItem.href}
-                      className="w-full block"
+                      className="w-full block text-secondary"
                       onClick={() => setOpen(false)}
                     >
                       {navItem.title}
@@ -77,9 +77,7 @@ function NavMobile() {
               ))}
             </ul>
             <div className="mt-6 space-y-5">
-              <button className="font-semibold w-full flex items-center justify-center bg-transparent px-2 py-2 rounded-md border border-neutral-300 hover:border-white transition-all duration-150">
-                Login
-              </button>
+              { getToken() ? <Logout /> : <Login />}
               <button className="font-semibold w-full flex items-center justify-center bg-white text-black px-2 py-2 rounded-md border hover:bg-transparent hover:text-white hover:border-white transition-all duration-150">
                 Download the app
               </button>

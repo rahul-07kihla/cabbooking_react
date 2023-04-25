@@ -52,12 +52,12 @@ export function SiteFooter() {
         <p>
           Built by{" "}
           <a
-            href="https://github.com/edroamz"
+            href="https://github.com/rahul-07kihla/cabbooking_react"
             target="_blank"
             rel="noreferrer"
             className="text-slate-300 hover:text-white underline underline-offset-4 decoration-slate-200"
           >
-            Eduardo Ambriz
+            rahul-07kihla
           </a>
         </p>
       </div>

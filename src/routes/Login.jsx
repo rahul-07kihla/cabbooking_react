@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { setUserSession } from '../utils/common';
+import { setUserSession, urlprefix } from '../utils/common';
 import axios from 'axios';
 
 export function Login() {
@@ -9,13 +9,14 @@ export function Login() {
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const url = urlprefix() + 'login';
 
     console.log(email,password);
     // handle button click of login form
     const handleLogin = () => {
         setError(null);
         setLoading(true);
-        axios.post('http://192.168.0.116:8000/api/login', { email: email, password: password }).then(response => {
+        axios.post(url, { email: email, password: password }).then(response => {
         setLoading(false);
         setUserSession(response.data.token.name, response.data);
         history('/');

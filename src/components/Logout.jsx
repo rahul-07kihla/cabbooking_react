@@ -10,7 +10,7 @@ const handleClick = (e) => {
 export default function Logout() {
   return (
     <>
-        <button onClick={handleClick}>
+        <button onClick={handleClick} className='text-secondary'>
             Logout
         </button>
     </>
