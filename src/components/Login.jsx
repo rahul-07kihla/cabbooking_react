@@ -10,9 +10,9 @@ export default function Login() {
                 </Link>
             </li>
             <li>
-                <button className="font-semibold flex items-center justify-center px-3 bg-white text-black py-2 leading-none rounded-md border hover:bg-transparent hover:text-white hover:border-white transition-all duration-150">
+                <Link to="/register" className='font-semibold flex items-center justify-center px-3 bg-white text-black py-2 leading-none rounded-md border hover:bg-transparent hover:text-white hover:border-white transition-all duration-150'>
                     Sign Up
-                </button>
+                </Link>
             </li>
         </>
     )

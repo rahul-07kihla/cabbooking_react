@@ -23,5 +23,5 @@ export const setUserSession = (token, user) => {
 }
 
 export const urlprefix = () => {
-  return 'http://192.168.0.116:8000/api/';
+  return 'http://man.cabbooking.svs151/api/';
 }

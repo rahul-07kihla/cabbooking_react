@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Root, Home, VehicleGrid, VehicleView, Test, Login, NotFound } from "./routes";
+import { Root, Home, VehicleGrid, VehicleView, Login, Register, NotFound } from "./routes";
 import "./main.css";
 
 const router = createBrowserRouter(
@@ -27,6 +27,10 @@ const router = createBrowserRouter(
         {
           path: "/login",
           element: <Login />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
         },
       ],
     },
